@@ -9,6 +9,7 @@ RUN git clone --branch $GIT_BRANCH --depth 1 $GIT_URL /project && \
 
 FROM nginx
 LABEL maintainer="Swire Chen <idoop@msn.cn>"
+LABEL org.opencontainers.image.authors="Swire Chen <idoop@msn.cn>"
 
 ENV APP_BASE=/var/www/simple-nuget-server
 ENV DEFAULT_SIZE=20M
