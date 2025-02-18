@@ -10,10 +10,10 @@ RUN git clone --branch $GIT_BRANCH --depth 1 $GIT_URL /project && \
 FROM nginx
 LABEL maintainer="Swire Chen <idoop@msn.cn>"
 
-ENV APP_BASE /var/www/simple-nuget-server
-ENV DEFAULT_SIZE 20M
-ENV DEFAULT_WORKER_PROCESSES 1
-ENV DEFAULT_WORKER_CONNECTIONS 65535
+ENV APP_BASE=/var/www/simple-nuget-server
+ENV DEFAULT_SIZE=20M
+ENV DEFAULT_WORKER_PROCESSES=1
+ENV DEFAULT_WORKER_CONNECTIONS=65535
 
 COPY --from=downloader /project $APP_BASE
 
